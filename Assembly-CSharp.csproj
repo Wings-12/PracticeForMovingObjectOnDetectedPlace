@@ -64,10 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\JumpTestWithCharacterController\JumpWithChaCon.cs" />
-    <Compile Include="Assets\JumpTestWithRigidbody\Scripts\Jump.cs" />
     <Compile Include="Assets\JumpWithCharacterController\JumpWithCharacterController.cs" />
     <Compile Include="Assets\MovingObjectOnDetectedPlane\AR Session Origin\Scripts\ARTapToPlane.cs" />
     <Compile Include="Assets\MovingObjectOnDetectedPlane\GameobjectToInstantiate\Scripts\MovingObjectOnDetectedPlane.cs" />
+    <Compile Include="Assets\WithRigidbobyToMoveObject\ObjectMovingOnDetectedPlane.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -657,7 +657,12 @@
       <HintPath>C:/Users/Wing/Documents/Repos/Unity3D/PracticeForMovingObjectOnDetectedPlace/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="RuntimeInspector.Runtime.csproj">
+      <Project>{D93DB378-CB34-6E1E-FC3E-F09A95938A09}</Project>
+      <Name>RuntimeInspector.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

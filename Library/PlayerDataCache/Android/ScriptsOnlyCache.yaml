@@ -57,27 +57,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 11954}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13184}
+    - Class: 114
+      Script: {instanceID: 13360}
     - Class: 114
       Script: {instanceID: 13494}
-    - Class: 114
-      Script: {instanceID: 13630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -313,6 +313,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 2970187961a020957dc971b161ca1d44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JumpWithChaCon
+  - hash:
+      serializedVersion: 2
       Hash: e8733e39efa851172df1c9eaef062265
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -371,6 +377,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARParticipant
+  - hash:
+      serializedVersion: 2
+      Hash: aa850eadb6ae2336de9674a4dd8cb8c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectMovingOnDetectedPlane
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -449,12 +461,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARFaceMeshVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Jump
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -755,12 +761,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 2970187961a020957dc971b161ca1d44
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JumpWithChaCon
   platform: 13
   scenePathNames:
   - Assets/MovingObjectOnDetectedPlane/SampleScene.unity

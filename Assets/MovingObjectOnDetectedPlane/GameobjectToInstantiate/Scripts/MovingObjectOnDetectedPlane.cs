@@ -37,8 +37,7 @@ public class MovingObjectOnDetectedPlane : MonoBehaviour
         elapsedTimeSinceTouchBegan = 0.0f;
         timerStartFlag = false;
 
-        // characterControllerにCharacterControllerの値を代入する
-        characterController = gameObjectToInstantiate.GetComponent<CharacterController>();
+        
 
         moveDirection = Vector3.zero;
     }
@@ -76,29 +75,31 @@ public class MovingObjectOnDetectedPlane : MonoBehaviour
             if (spawndMovingObject == null)
             {
                 spawndMovingObject = Instantiate(gameObjectToInstantiate, spawnedMovingObjectMovingPosition, hitPose.rotation);
+                // characterControllerにCharacterControllerの値を代入する
+                characterController = spawndMovingObject.GetComponent<CharacterController>();
             }
             //else
             //{
             //    spawndMovingObject.transform.position = hitPose.position + new Vector3(0.0f, 0.1f, 0.0f);
             //}
+        }
 
-            // バグ：ジャンプできない
-            // 推測される原因：
-            // ・次のフレームですぐに移動処理に入ってしまうから
-            if (characterController.isGrounded)//  もし地面についていたら、
+        // バグ：ジャンプできない
+        // 推測される原因：
+        // ・次のフレームですぐに移動処理に入ってしまうから
+        if (characterController.isGrounded)//  もし地面についていたら、
+        {
+            isJumping = false;
+
+            if (Input.GetMouseButtonDown(0))//  もし、タップされたら、
             {
-                isJumping = false;
-
-                if (Input.GetMouseButtonDown(0))//  もし、タップされたら、
-                {
-                    isJumping = true;
-                    moveDirection.y = JumpPower;//  y座標をジャンプ力の分だけ動かす
-                }
-                //else if (isJumping == false)
-                //{
-                //    spawndMovingObject.transform.position = playerMovingPosition;
-                //}
+                isJumping = true;
+                moveDirection.y = JumpPower;//  y座標をジャンプ力の分だけ動かす
             }
+            //else if (isJumping == false)
+            //{
+            //    spawndMovingObject.transform.position = playerMovingPosition;
+            //}
         }
 
         moveDirection.y += Physics.gravity.y * Time.deltaTime; //常にy座標を重力の分だけ動かす(重力処理)
