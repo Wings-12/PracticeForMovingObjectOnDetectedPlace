@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{33422899-65E8-B75B-0361-67699BFF8EBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -63,11 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JumpTestWithCharacterController\JumpWithChaCon.cs" />
-    <Compile Include="Assets\JumpWithCharacterController\JumpWithCharacterController.cs" />
-    <Compile Include="Assets\MovingObjectOnDetectedPlane\AR Session Origin\Scripts\ARTapToPlane.cs" />
-    <Compile Include="Assets\MovingObjectOnDetectedPlane\GameobjectToInstantiate\Scripts\MovingObjectOnDetectedPlane.cs" />
-    <Compile Include="Assets\WithRigidbobyToMoveObject\ObjectMovingOnDetectedPlane.cs" />
+    <Compile Include="Assets\ARProjects\MovingObjectOnDetectedPlane\AR Session Origin\Scripts\TouchARRaycastInput.cs" />
+    <Compile Include="Assets\ARProjects\MovingObjectOnDetectedPlane\ObjectGenerator\Prefabs\Scripts\ObjectController.cs" />
+    <Compile Include="Assets\ARProjects\MovingObjectOnDetectedPlane\ObjectGenerator\Scripts\ObjectGenerator.cs" />
+    <Compile Include="Assets\ARProjects\WithRigidbobyToMoveObject\GlobalData.cs" />
+    <Compile Include="Assets\ARProjects\WithRigidbobyToMoveObject\ObjectMovingOnDetectedPlane.cs" />
+    <Compile Include="Assets\NotARProjects\JumpTestWithCharacterController\JumpWithChaCon.cs" />
+    <Compile Include="Assets\NotARProjects\JumpTestWithRigidbody\JumpByTapping.cs" />
+    <None Include="Assets\LunarConsole\readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -658,9 +662,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LunarConsole.csproj">
+      <Project>{CE4EE088-DE46-62F6-67F0-9BDE6655088C}</Project>
+      <Name>LunarConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="RuntimeInspector.Runtime.csproj">
       <Project>{D93DB378-CB34-6E1E-FC3E-F09A95938A09}</Project>
       <Name>RuntimeInspector.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="LunarConsoleEditor.csproj">
+      <Project>{08B5F084-5266-85F7-A851-ABD4235E2D75}</Project>
+      <Name>LunarConsoleEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

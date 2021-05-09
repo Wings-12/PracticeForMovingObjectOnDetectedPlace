@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/MovingObjectOnDetectedPlane/SampleScene.unity
+- path: Assets/NotARProjects/JumpTestWithRigidbody/JumpTestWithRigidbody.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
